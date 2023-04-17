@@ -14,7 +14,7 @@ app.use("/users", userRoute)
 app.use(authentication)
 app.use("/Moderator", productRoute)
 
-app.listen(4500, async () => {
+app.listen(process.env.port, async () => {
     try {
         await connection
         console.log("Port is Connected to 4500");
